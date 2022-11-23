@@ -12,11 +12,11 @@ def fajlBeolvasas():
 
 def menu():
     system("cls")
-    print("---------------Menü-------------")
-    print("0 - Kilépés")
+    print("---------------Kisbolt-------------")
     print("1 - Összes áru")
-    print("2 - Kosár")
-    print("3 - Új áru felvététe")
-    print("4 - Áru törlése")
-    print("--------------------------------")
+    print("2 - Új áru felvététe")
+    print("3 - Áru törlése")
+    print("------------------------------------")
+    print("0 - Kilépés")
+    print("4 - Kosár")
     return input("Kérem válasszon egy menüpontot==> ")
