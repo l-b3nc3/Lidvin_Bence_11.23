@@ -1,4 +1,5 @@
 from data import aruk, arak
+from os import system
 
 
 def fajlBeolvasas():
@@ -9,4 +10,13 @@ def fajlBeolvasas():
         arak.append(int(darabolt[1]))
     file.close()
 
-
+def menu():
+    system("cls")
+    print("---------------Menü-------------")
+    print("0 - Kilépés")
+    print("1 - Összes áru")
+    print("2 - Kosár")
+    print("3 - Új áru felvététe")
+    print("4 - Áru törlése")
+    print("--------------------------------")
+    return input("Kérem válasszon egy menüpontot==> ")
