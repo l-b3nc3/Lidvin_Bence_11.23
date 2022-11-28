@@ -19,4 +19,5 @@ def menu():
     print("------------------------------------")
     print("0 - Kilépés")
     print("4 - Kosár")
+    print("------------------------------------")
     return input("Kérem válasszon egy menüpontot==> ")
