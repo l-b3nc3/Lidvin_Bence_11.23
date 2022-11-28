@@ -17,7 +17,16 @@ def menu():
     print("2 - Új áru felvététe")
     print("3 - Áru törlése")
     print("------------------------------------")
+    print("4 - Kosár tartalma")
+    print("5 - Áru felvétele kosárba")
     print("0 - Kilépés")
-    print("4 - Kosár")
     print("------------------------------------")
     return input("Kérem válasszon egy menüpontot==> ")
+
+def aruKiiras():
+    system("cls")
+    print("-----------------Az összes áru--------------")
+    for i in range(0, len(aruk)):
+        print(f"\t{i+1}. {(aruk[i])}: {arak[i]} Ft ")
+    input("")
+        
