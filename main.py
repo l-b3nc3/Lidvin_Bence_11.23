@@ -9,7 +9,7 @@ while valasztas!=0:
     if valasztas=="1":
         aruKiiras()
     if valasztas=="2":
-        pass
+        ujAru()
     if valasztas=="3":
         pass
     if valasztas=="4":

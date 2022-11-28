@@ -29,4 +29,20 @@ def aruKiiras():
     for i in range(0, len(aruk)):
         print(f"\t{i+1}. {(aruk[i])}: {arak[i]} Ft ")
     input("")
+
+def mentesFajlba(aru, ar):
+    file=open("aruk.csv", "a", encoding="utf-8")
+    file.write(f"\n{aru};{ar}")
+    file.close()
+
+def ujAru():
+    system("cls")
+    print("---------Kérem adja meg a felvenni kívánt áru nevét és árát-----------")
+    ujAru=input("Áru neve==>")
+    ujAr=int(input("Áru ára==>"))
+    aruk.append(ujAru)
+    arak.append(ujAr)
+    mentesFajlba(ujAru, ujAr)
+    input("A felvétel megtörtént...")
+
         
