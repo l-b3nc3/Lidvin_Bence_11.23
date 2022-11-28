@@ -9,11 +9,11 @@ while valasztas!=0:
     if valasztas=="1":
         aruKiiras()
         input("")
-    if valasztas=="2":
+    elif valasztas=="2":
         ujAru()
-    if valasztas=="3":
+    elif valasztas=="3":
         aruTorlese()
-    if valasztas=="4":
-        pass
-    if valasztas=="5":
-        pass
+    elif valasztas=="4":
+        aruFelveteleKosarba()
+    elif valasztas=="5":
+        kosarKiir()

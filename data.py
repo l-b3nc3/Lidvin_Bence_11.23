@@ -1,2 +1,5 @@
 aruk=[]
 arak=[]
+kosar_aruk=[]
+kosar_arak=[]
+kosar_aru_db=[]
