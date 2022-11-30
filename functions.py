@@ -88,9 +88,17 @@ def kosarKiir():
         for item in kosar_arak:
             osszeg+=item
         return osszeg
-    print(f"Összesen{osszegzes()}")
-    input("Vissza...")
+    print(f"Összesen: {osszegzes()} Ft")
 
 def aruTorleseKosarbol():
-    pass
+    system("cls")
+    kosarKiir()
+    sorszam=int(input("Kérem adja meg a törölni kívánt árucikk sorszámát==>"))
+    mennyiseg=int(input("Kérem adja meg a törölni kívánt mennyiséget==>"))
+    while mennyiseg<kosar_aru_db[sorszam-1]:
+        kosar_aru_db[sorszam-1]-mennyiseg
+    kosar_aruk.pop(sorszam-1)
+    kosar_arak.pop(sorszam-1)
+input("A törlés sikerült...")
+    
 
