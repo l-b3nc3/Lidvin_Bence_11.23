@@ -1,4 +1,4 @@
-from data import aruk, arak, kosar_aruk, kosar_arak, kosar_aru_db
+from data import*
 from os import system
 
 
@@ -18,7 +18,8 @@ def menu():
     print("3 - Áru törlése")
     print("------------------------------------")
     print("4 - Áru felvétele kosárba")
-    print("5 - Kosár tartalma")
+    print("5 - Áru törlése a kosárból")
+    print("6 - Kosár tartalma")
     print("0 - Kilépés")
     print("------------------------------------")
     return input("Kérem válasszon egy menüpontot==> ")
@@ -67,11 +68,12 @@ def aruFelveteleKosarba():
     print("-------------Vásárlás--------------")
     aruKiiras()
     print("-----------------------------------")
-    sorszam=input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>")
+    sorszam=int(input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>"))
     db=int(input("Kérem adja meg a vásárolni kívánt mennyiséget==>"))
     kosar_aruk.append(aruk[sorszam-1])
     kosar_arak.append(arak[sorszam-1])
     kosar_aru_db.append(db)
+    input("A felvétel megtörtént...")
 
   
 
@@ -79,11 +81,8 @@ def kosarKiir():
     system("cls")
     print("------------A kosár trtalma-------------")
     for i in range(0, len(kosar_aruk)):
-        print(f"\t{i+1}. {(kosar_aruk[i])}: {kosar_arak[i]} Ft {kosar_aru_db[i]} ")
+        print(f"\t{i+1}. {(kosar_aruk[i])}: {kosar_arak[i]} Ft ---- {kosar_aru_db[i]} db ")
+    print("----------------------------------------")
+    
     input("Vissza...")
-    
 
-    
-
-
-        

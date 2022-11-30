@@ -16,4 +16,6 @@ while valasztas!=0:
     elif valasztas=="4":
         aruFelveteleKosarba()
     elif valasztas=="5":
+        pass
+    elif valasztas=="6":
         kosarKiir()
