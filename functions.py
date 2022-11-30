@@ -96,7 +96,7 @@ def aruTorleseKosarbol():
     sorszam=int(input("Kérem adja meg a törölni kívánt árucikk sorszámát==>"))
     mennyiseg=int(input("Kérem adja meg a törölni kívánt mennyiséget==>"))
     if mennyiseg<kosar_aru_db[sorszam-1]:
-        kosar_aru_db=kosar_aru_db[sorszam-1]-mennyiseg
+        kosar_aru_db[sorszam-1]=kosar_aru_db[sorszam-1]-mennyiseg
     else: 
         kosar_aruk.pop(sorszam-1)
         kosar_arak.pop(sorszam-1)
