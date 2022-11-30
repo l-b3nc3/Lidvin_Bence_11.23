@@ -83,5 +83,14 @@ def kosarKiir():
     for i in range(0, len(kosar_aruk)):
         print(f"\t{i+1}. {(kosar_aruk[i])} ---- {kosar_aru_db[i]} db ---- {kosar_arak[i]} Ft ")
     print("----------------------------------------")
+    def osszegzes():
+        osszeg=0
+        for item in kosar_arak:
+            osszeg+=item
+        return osszeg
+    print(f"Összesen{osszegzes()}")
     input("Vissza...")
+
+def aruTorleseKosarbol():
+    pass
 
