@@ -71,7 +71,7 @@ def aruFelveteleKosarba():
     sorszam=int(input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>"))
     db=int(input("Kérem adja meg a vásárolni kívánt mennyiséget==>"))
     kosar_aruk.append(aruk[sorszam-1])
-    kosar_arak.append(arak[sorszam-1]*db)
+    kosar_arak.append(arak[sorszam-1])
     kosar_aru_db.append(db)
     input("A felvétel megtörtént...")
 
@@ -81,11 +81,11 @@ def kosarKiir():
     system("cls")
     print("------------A kosár trtalma-------------")
     for i in range(0, len(kosar_aruk)):
-        print(f"\t{i+1}. {(kosar_aruk[i])} ---- {kosar_aru_db[i]} db ---- {kosar_arak[i]} Ft ")
+        print(f"\t{i+1}. {(kosar_aruk[i])} ---- {kosar_aru_db[i]} db ---- {kosar_arak[i]*kosar_aru_db[i]} Ft ")
     print("----------------------------------------")
     def osszegzes():
         osszeg=0
-        for item in kosar_arak:
+        for item in kosar_arak*kosar_aru_db[i]:
             osszeg+=item
         return osszeg
     print(f"Összesen: {osszegzes()} Ft")
@@ -97,6 +97,7 @@ def aruTorleseKosarbol():
     mennyiseg=int(input("Kérem adja meg a törölni kívánt mennyiséget==>"))
     if mennyiseg<kosar_aru_db[sorszam-1]:
         kosar_aru_db[sorszam-1]=kosar_aru_db[sorszam-1]-mennyiseg
+       
     else: 
         kosar_aruk.pop(sorszam-1)
         kosar_arak.pop(sorszam-1)
