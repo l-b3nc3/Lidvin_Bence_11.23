@@ -57,7 +57,9 @@ def aruTorlese():
     system("cls")
     print("---------Áru törlése----------")
     aruKiiras()
-    sorszam=int(input("Kérem adja meg a törölni kívánt ember sorszámát==>"))
+    sorszam=1000
+    while sorszam>len(aruk):
+        sorszam=int(input("Kérem adja meg a törölni kívánt ember sorszámát==>"))
     aruk.pop(sorszam-1)
     arak.pop(sorszam-1)
     mentesFajlba()
@@ -68,7 +70,9 @@ def aruFelveteleKosarba():
     print("-------------Vásárlás--------------")
     aruKiiras()
     print("-----------------------------------")
-    sorszam=int(input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>"))
+    sorszam=1000
+    while sorszam>len(aruk):
+        sorszam=int(input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>"))
     db=int(input("Kérem adja meg a vásárolni kívánt mennyiséget==>"))
     kosar_aruk.append(aruk[sorszam-1])
     kosar_arak.append(arak[sorszam-1])
@@ -93,7 +97,9 @@ def kosarKiir():
 def aruTorleseKosarbol():
     system("cls")
     kosarKiir()
-    sorszam=int(input("Kérem adja meg a törölni kívánt árucikk sorszámát==>"))
+    sorszam=1000
+    while sorszam>len(aruk):    
+        sorszam=int(input("Kérem adja meg a törölni kívánt árucikk sorszámát==>"))
     mennyiseg=int(input("Kérem adja meg a törölni kívánt mennyiséget==>"))
     if mennyiseg<kosar_aru_db[sorszam-1]:
         kosar_aru_db[sorszam-1]=kosar_aru_db[sorszam-1]-mennyiseg
