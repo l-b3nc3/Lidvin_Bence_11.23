@@ -59,7 +59,7 @@ def aruTorlese():
     aruKiiras()
     sorszam=1000
     while sorszam>len(aruk):
-        sorszam=int(input("Kérem adja meg a törölni kívánt ember sorszámát==>"))
+        sorszam=int(input("Kérem adja meg a törölni kívánt áru sorszámát==>"))
     aruk.pop(sorszam-1)
     arak.pop(sorszam-1)
     mentesFajlba()
@@ -72,8 +72,8 @@ def aruFelveteleKosarba():
     print("-----------------------------------")
     sorszam=1000
     while sorszam>len(aruk):
-        sorszam=int(input("Kérem adja meg a megvásárloni kiívánt termék sorszámát==>"))
-    db=int(input("Kérem adja meg a vásárolni kívánt mennyiséget==>"))
+        sorszam=int(input("Kérem adja meg a megvásárloni kívánt termék sorszámát==>"))
+    db=int(input("Kérem adja meg a kívánt mennyiséget==>"))
     kosar_aruk.append(aruk[sorszam-1])
     kosar_arak.append(arak[sorszam-1])
     kosar_aru_db.append(db)
