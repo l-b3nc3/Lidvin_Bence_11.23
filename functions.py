@@ -26,9 +26,10 @@ def menu():
 
 def aruKiiras():
     system("cls")
-    print("-----------------Az összes áru--------------")
+    print("---------------Kínálat--------------")
     for i in range(0, len(aruk)):
         print(f"\t{i+1}. {(aruk[i])}: {arak[i]} Ft ")
+    print("-----------------------------------")     
 
 def ujAruFajlVegere(aru, ar):
     file=open("aruk.csv", "a", encoding="utf-8")
@@ -83,10 +84,10 @@ def aruFelveteleKosarba():
 
 def kosarKiir():
     system("cls")
-    print("------------A kosár trtalma-------------")
+    print("------------A kosár tartalma-------------")
     for i in range(0, len(kosar_aruk)):
         print(f"\t{i+1}. {(kosar_aruk[i])} ---- {kosar_aru_db[i]} db ---- {kosar_arak[i]*kosar_aru_db[i]} Ft ")
-    print("----------------------------------------")
+    print("-----------------------------------------")
     def osszegzes():
         osszeg=0
         for item in kosar_arak*kosar_aru_db[i]:
